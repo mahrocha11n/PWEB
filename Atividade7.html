@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedras Papeis e Tesouras </title>
+</head>
+<body>
+    <header>
+        <h1> Bem Vindo ao Pedras Papeis e Tesouras!!!</h1>
+        <p>O melhor jogo para os autossuficientes </p>
+        <p> Ou pessoas solitárias...</p>
+        <p></p>
+        <p><DIVIRTA-SE></DIVIRTA-SE></p>
+    </header>
+        <button onclick="play()">Jogar agora</button>
+    <script>
+        function play(){
+            const opcoes = ["pedra", "papel", "tesoura"];
+            let jogadaPlayer = prompt("Escreva sua escolha exatamente como nas seguites opcoes: pedra, papel ou tesoura")
+            
+            if(opcoes.includes(jogadaPlayer)){
+                let numAleatorio = Math.floor(Math.random()*3);
+                let jogadaComput = opcoes[numAleatorio];
+
+                switch(jogadaPlayer){
+
+                    case jogadaComput:
+                        alert("Empate!!!");
+                        break
+
+                    case "pedra":
+                        if(jogadaComput == opcoes[1]){
+                            alert("jogador Perde!!!");
+                            
+                        }
+                        else{
+                            alert("Jogador Vence!!");
+                             }
+                        break
+
+                    case "papel":
+                        if(jogadaComput == opcoes[2]){
+                            alert("jogador Perde!!!");
+                            
+                        }
+                        else{
+                            alert("Jogador Vence!!");
+                             }
+                        break
+                    case "tesoura":
+                        if(jogadaComput == opcoes[0]){
+                            alert("jogador Perde!!!");
+                            
+                        }
+                        else{
+                            alert("Jogador Vence!!");
+                             }
+                        break
+            }
+        }
+        else{
+            alert("Entrada Invalida!!!");
+        }
+
+    }
+
+
+    </script>
+
+</body>
+</html>
